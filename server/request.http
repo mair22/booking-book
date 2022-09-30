@@ -17,3 +17,24 @@ Content-Type: application/json
     "username": "mair22",
     "password": "Hirosawa2212"
 }
+
+###
+
+//Get Posts
+GET http://localhost:5000/api/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM2OTM0ODBhMWFkNjA2YTFkYTA5ZmEiLCJpYXQiOjE2NjQ1MjUxNTR9.GIQA0pIlPB1lWDSQUqFqA3Hb_Wml8BVmc0HoCZumq6M
+
+###
+
+//Create Posts
+POST http://localhost:5000/api/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM2OTM0ODBhMWFkNjA2YTFkYTA5ZmEiLCJpYXQiOjE2NjQ1MjUxNTR9.GIQA0pIlPB1lWDSQUqFqA3Hb_Wml8BVmc0HoCZumq6M
+
+{
+    "title": "Book",
+    "description": "Manga",
+    "author": "Hirosawa",
+    "chapter": 3,
+    "status": "CONTINUE",
+}

@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const authRouter = require("./routes/auth");
+const postRouter = require("./routes/post");
 
 const connectDB = async () => {
   try {
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/auth", authRouter);
+app.use("/api/post", postRouter);
 
 const PORT = process.env.PORT || 5000;
 
