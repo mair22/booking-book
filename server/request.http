@@ -1,0 +1,19 @@
+//Register
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "mair22",
+    "password": "Hirosawa2212"
+}
+
+###
+
+//Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "fugena",
+    "password": "2212"
+}
