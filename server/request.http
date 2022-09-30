@@ -22,14 +22,14 @@ Content-Type: application/json
 
 //Get Posts
 GET http://localhost:5000/api/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM2OTM0ODBhMWFkNjA2YTFkYTA5ZmEiLCJpYXQiOjE2NjQ1MjUxNTR9.GIQA0pIlPB1lWDSQUqFqA3Hb_Wml8BVmc0HoCZumq6M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM2OTM0ODBhMWFkNjA2YTFkYTA5ZmEiLCJpYXQiOjE2NjQ1MzEzMTR9.L1arzw15vOBevnT8Bu1XRVqC-fhHu3sCz8deRlVAtW4
 
 ###
 
 //Create Posts
 POST http://localhost:5000/api/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM2OTM0ODBhMWFkNjA2YTFkYTA5ZmEiLCJpYXQiOjE2NjQ1MjUxNTR9.GIQA0pIlPB1lWDSQUqFqA3Hb_Wml8BVmc0HoCZumq6M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM2OTM0ODBhMWFkNjA2YTFkYTA5ZmEiLCJpYXQiOjE2NjQ1MzEzMTR9.L1arzw15vOBevnT8Bu1XRVqC-fhHu3sCz8deRlVAtW4
 
 {
     "title": "Book",
