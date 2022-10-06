@@ -3,8 +3,8 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "mair22",
-    "password": "Hirosawa2212"
+    "username": "mine",
+    "password": "2212"
 }
 
 ###
@@ -14,27 +14,28 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "mair22",
-    "password": "Hirosawa2212"
+    "username": "mine",
+    "password": "2212"
 }
 
 ###
 
 //Get Posts
 GET http://localhost:5000/api/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM2OTM0ODBhMWFkNjA2YTFkYTA5ZmEiLCJpYXQiOjE2NjQ1MzEzMTR9.L1arzw15vOBevnT8Bu1XRVqC-fhHu3sCz8deRlVAtW4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwMzAxMTd9.gzUCjjOB01_Clu8fSYHd27Y-e4MwfBQLCsVpqVRxvEQ
 
 ###
 
 //Create Posts
 POST http://localhost:5000/api/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzM2OTM0ODBhMWFkNjA2YTFkYTA5ZmEiLCJpYXQiOjE2NjQ1MzEzMTR9.L1arzw15vOBevnT8Bu1XRVqC-fhHu3sCz8deRlVAtW4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwMjY2ODF9.2kbF3-gCYJB4PNLKSbNc-Z3lfyV7z_dCCvcSW9SJqe4
 
 {
     "title": "Book",
-    "description": "Manga",
-    "author": "Hirosawa",
+    "description": "Reading",
+    "url": "google.com",
+    "author": "Eddie",
     "chapter": 3,
-    "status": "CONTINUE",
+    "status": "CONTINUE"
 }

@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const PostSchema = new Schema(
   {
-    tilte: {
+    title: {
       type: String,
       required: true,
     },
@@ -18,10 +18,6 @@ const PostSchema = new Schema(
       require: true,
       default: "Anonymous",
     },
-    createAt: {
-      type: Date,
-      default: Date.now,
-    },
     chapter: {
       type: String,
     },
@@ -33,6 +29,7 @@ const PostSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "users",
     },
+    attachment: String,
     likeCount: {
       type: Number,
       default: 0,
