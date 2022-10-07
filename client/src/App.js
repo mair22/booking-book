@@ -1,11 +1,11 @@
-import "./index.css";
+import { useDispatch } from "react-redux";
+import * as actions from "./redux/actions";
 
 function App() {
-  return (
-    <div className="text-primary">
-      <h1>Hello World</h1>
-    </div>
-  );
+  const dispatch = useDispatch();
+
+  dispatch(actions.getPosts.getPostsRequest);
+  return <p className="text-center">こんにちは</p>;
 }
 
 export default App;

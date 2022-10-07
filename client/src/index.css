@@ -7,4 +7,7 @@
   body {
     @apply font-jp text-primary;
   }
+  h1 {
+    @apply text-5xl font-bold;
+  }
 }
