@@ -26,7 +26,7 @@ router.get("/", verifyToken, async (req, res) => {
 //@access Private
 
 router.post("/", verifyToken, async (req, res) => {
-  const { title, description, url, chapter, author, status } = req.body;
+  const { title, description, url, chapter, author, status, likeCount } = req.body;
 
   //Simple Validation
   if (!title)
@@ -42,6 +42,7 @@ router.post("/", verifyToken, async (req, res) => {
       author,
       chapter,
       user: req.userId,
+      likeCount,
     });
 
     await newPost.save();
@@ -89,6 +90,31 @@ router.put("/:id", verifyToken, async(req, res) => {
       });
 
     res.json({ success: true, message: "Updated Success!!", post: updatedPost });
+  } catch (error) {
+    console.log(error);
+    res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error!!!" });
+  }
+});
+
+//@route DELETE api/posts
+//@desc DELETE posts
+//@access Private
+
+router.delete("/:id", verifyToken, async (req, res) => {
+  try {
+    const postDeleteCondition = { _id: req.params.id, user: req.userId };
+    const deletedPost = await Post.findOneAndDelete(postDeleteCondition);
+
+    //User not authorized or post not found
+    if (!deletedPost)
+      return res.status(401).json({
+        success: false,
+        message: "Post not found or user not authorized",
+      });
+
+    res.json({ success: true, post: deletedPost });
   } catch (error) {
     console.log(error);
     res

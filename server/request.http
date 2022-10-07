@@ -22,14 +22,14 @@ Content-Type: application/json
 
 //Get Posts
 GET http://localhost:5000/api/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwMzAxMTd9.gzUCjjOB01_Clu8fSYHd27Y-e4MwfBQLCsVpqVRxvEQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwNDA4NzJ9.7flYmlFsySgWsImAmrrazPs4xQNOFjYfY17GZ32OUiI
 
 ###
 
 //Create Posts
 POST http://localhost:5000/api/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwMjY2ODF9.2kbF3-gCYJB4PNLKSbNc-Z3lfyV7z_dCCvcSW9SJqe4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwNDA4NzJ9.7flYmlFsySgWsImAmrrazPs4xQNOFjYfY17GZ32OUiI
 
 {
     "title": "Book",
@@ -37,5 +37,31 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlN
     "url": "google.com",
     "author": "Eddie",
     "chapter": 3,
-    "status": "CONTINUE"
+    "status": "CONTINUE",
+    "likeCount": 3
 }
+
+###
+
+//Update Posts
+
+PUT http://localhost:5000/api/post/633e87c968666e2b28bb2574
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwNDA4NzJ9.7flYmlFsySgWsImAmrrazPs4xQNOFjYfY17GZ32OUiI
+
+{
+    "title": "Manga",
+    "description": "Watching",
+    "url": "google.com",
+    "author": "Eddie",
+    "chapter": 5,
+    "status": "CONTINUE",
+    "likeCount": 7
+}
+
+###
+
+//Delete Posts
+
+DELETE http://localhost:5000/api/post/633e541c6ff2dc14f6f65595
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwNDA4NzJ9.7flYmlFsySgWsImAmrrazPs4xQNOFjYfY17GZ32OUiI
