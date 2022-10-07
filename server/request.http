@@ -3,7 +3,7 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "mine",
+    "username": "fumine",
     "password": "2212"
 }
 
@@ -14,7 +14,7 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "mine",
+    "username": "fumine",
     "password": "2212"
 }
 
@@ -22,14 +22,14 @@ Content-Type: application/json
 
 //Get Posts
 GET http://localhost:5000/api/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwNDA4NzJ9.7flYmlFsySgWsImAmrrazPs4xQNOFjYfY17GZ32OUiI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNmOGZkYzZhMTJiMjEzMjBiNGRhYmQiLCJpYXQiOjE2NjUxMDk5OTF9.6pIAPE3w0Vk8vQ37drcjFng-TCrJ0ipiEskHz0vY1oU
 
 ###
 
 //Create Posts
 POST http://localhost:5000/api/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwNDA4NzJ9.7flYmlFsySgWsImAmrrazPs4xQNOFjYfY17GZ32OUiI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNmOGZkYzZhMTJiMjEzMjBiNGRhYmQiLCJpYXQiOjE2NjUxMDk5OTF9.6pIAPE3w0Vk8vQ37drcjFng-TCrJ0ipiEskHz0vY1oU
 
 {
     "title": "Book",
@@ -38,16 +38,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlN
     "author": "Eddie",
     "chapter": 3,
     "status": "CONTINUE",
-    "likeCount": 3
+    "likeCount": 0
 }
 
 ###
 
 //Update Posts
 
-PUT http://localhost:5000/api/post/633e87c968666e2b28bb2574
+PUT http://localhost:5000/api/post/633f901b6a12b21320b4dac1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwNDA4NzJ9.7flYmlFsySgWsImAmrrazPs4xQNOFjYfY17GZ32OUiI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNmOGZkYzZhMTJiMjEzMjBiNGRhYmQiLCJpYXQiOjE2NjUxMDk5OTF9.6pIAPE3w0Vk8vQ37drcjFng-TCrJ0ipiEskHz0vY1oU
 
 {
     "title": "Manga",
@@ -63,5 +63,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlN
 
 //Delete Posts
 
-DELETE http://localhost:5000/api/post/633e541c6ff2dc14f6f65595
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNlNGEwOWZiNmZhMjdmOTViODEwY2IiLCJpYXQiOjE2NjUwNDA4NzJ9.7flYmlFsySgWsImAmrrazPs4xQNOFjYfY17GZ32OUiI
+DELETE http://localhost:5000/api/post/633f901b6a12b21320b4dac1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzNmOGZkYzZhMTJiMjEzMjBiNGRhYmQiLCJpYXQiOjE2NjUxMDk5OTF9.6pIAPE3w0Vk8vQ37drcjFng-TCrJ0ipiEskHz0vY1oU
